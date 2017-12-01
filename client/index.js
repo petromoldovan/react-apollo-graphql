@@ -15,7 +15,10 @@ import SongCreate from "./components/SongCreate";
 import SongDetail from "./components/SongDetail";
 
 
-const client = new ApolloClient({})
+const client = new ApolloClient({
+  //crazy caching shit. If data with this id changes then it will be automatically refetched. You do not need do refetch after mutation now
+  dataIdFromObject: o => o.id
+})
 
 const Root = () => {
   return (

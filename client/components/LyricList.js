@@ -11,7 +11,7 @@ class Lyriclist extends React.Component {
 
 	render() {
 		return (
-			<ul className="collection-item">
+			<ul className="collection">
 				{this.renderLyrics()}
 			</ul>
 		)
